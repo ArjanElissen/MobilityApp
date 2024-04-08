@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TravelPossibilities">
+
+    <TextView
+        android:id="@+id/travelPossibilitiesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/americancaptain"
+        android:text="@string/Travel"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/travelBox"
+        android:layout_width="358dp"
+        android:layout_height="533dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/travelPossibilitiesText"
+        app:layout_constraintVertical_bias="0.421"
+        app:srcCompat="@drawable/box" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="317dp"
+        android:layout_height="494dp"
+        app:layout_constraintBottom_toBottomOf="@+id/travelBox"
+        app:layout_constraintEnd_toEndOf="@+id/travelBox"
+        app:layout_constraintStart_toStartOf="@+id/travelBox"
+        app:layout_constraintTop_toTopOf="@+id/travelBox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

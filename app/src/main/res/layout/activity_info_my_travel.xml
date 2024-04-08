@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoMyTravel">
+
+    <ImageView
+        android:id="@+id/infoBox"
+        android:layout_width="317dp"
+        android:layout_height="426dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        app:srcCompat="@drawable/box" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="delete"
+        android:text="@string/Delete"
+        app:backgroundTint="#FF0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoBox" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:fontFamily= "@font/americancaptain"
+        android:textColor= "@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/locationIcon"
+        android:layout_width="38dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/destinationIcon"
+        app:layout_constraintStart_toStartOf="@+id/infoBox"
+        app:srcCompat="@drawable/location" />
+
+    <ImageView
+        android:id="@+id/calendarIcon"
+        android:layout_width="38dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/clockIcon"
+        app:layout_constraintStart_toStartOf="@+id/infoBox"
+        app:srcCompat="@drawable/calender" />
+
+    <ImageView
+        android:id="@+id/destinationIcon"
+        android:layout_width="38dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/calendarIcon"
+        app:layout_constraintStart_toStartOf="@+id/infoBox"
+        app:srcCompat="@drawable/finish" />
+
+    <TextView
+        android:id="@+id/fromText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/toText"
+        app:layout_constraintEnd_toEndOf="@+id/infoBox"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/locationIcon"
+        app:layout_constraintTop_toTopOf="@+id/infoBox"
+        app:layout_constraintVertical_bias="0.964" />
+
+    <TextView
+        android:id="@+id/toText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="32dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/dateText"
+        app:layout_constraintEnd_toEndOf="@+id/infoBox"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/locationIcon" />
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/timeText"
+        app:layout_constraintEnd_toEndOf="@+id/infoBox"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/locationIcon"
+        app:layout_constraintTop_toTopOf="@+id/infoBox"
+        app:layout_constraintVertical_bias="0.988" />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="168dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/infoBox"
+        app:layout_constraintEnd_toEndOf="@+id/infoBox"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/locationIcon" />
+
+    <ImageView
+        android:id="@+id/clockIcon"
+        android:layout_width="38dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="168dp"
+        app:layout_constraintBottom_toBottomOf="@+id/infoBox"
+        app:layout_constraintStart_toStartOf="@+id/infoBox"
+        app:srcCompat="@drawable/clock" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

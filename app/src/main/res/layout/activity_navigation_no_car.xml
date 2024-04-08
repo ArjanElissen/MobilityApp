@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NavigationNoCar">
+
+    <ImageView
+        android:id="@+id/box"
+        android:layout_width="331dp"
+        android:layout_height="390dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carIcon"
+        app:layout_constraintVertical_bias="0.495"
+        app:srcCompat="@drawable/box" />
+
+    <Button
+        android:id="@+id/findButton"
+        android:layout_width="331dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/buttonstyle"
+        android:backgroundTint="@color/black"
+        android:onClick="find"
+        android:text="FIND SOMEONE"
+        android:textColor="@color/white"
+        app:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeText"
+        app:layout_constraintVertical_bias="0.525"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/whereText"
+        android:layout_width="378dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/Want"
+        android:textAlignment="center"
+        android:textSize="45sp"
+        android:fontFamily= "@font/americancaptain"
+        android:textColor= "@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+
+    <AutoCompleteTextView
+        android:id="@+id/fromText"
+        android:text= ""
+        android:layout_width="231dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/locationtextbox"
+        android:ems="10"
+        android:hint="from"
+        android:inputType="textPersonName"
+        android:paddingLeft="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/box"
+        app:layout_constraintStart_toStartOf="@+id/box"
+        app:layout_constraintTop_toTopOf="@+id/box"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/timeText"
+        android:onClick="popTimePicker"
+        android:focusableInTouchMode="true"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:layout_width="231dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/textbox"
+        android:ems="10"
+        android:hint="xx : xx"
+        android:inputType="time"
+        android:paddingLeft="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/box"
+        app:layout_constraintStart_toStartOf="@+id/box"
+        app:layout_constraintTop_toBottomOf="@+id/dateText"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/dateText"
+        android:focusableInTouchMode="true"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:layout_width="231dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/textbox"
+        android:ems="10"
+        android:hint="xx/xx/xxxx"
+        android:inputType="date"
+        android:paddingLeft="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/box"
+        app:layout_constraintStart_toStartOf="@+id/box"
+        app:layout_constraintTop_toBottomOf="@+id/toText"
+        tools:ignore="MissingConstraints" />
+
+    <AutoCompleteTextView
+        android:id="@+id/toText"
+        android:layout_width="231dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/locationtextbox"
+        android:ems="10"
+        android:hint="to"
+        android:inputType="textPersonName"
+        android:paddingLeft="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/box"
+        app:layout_constraintStart_toStartOf="@+id/box"
+        app:layout_constraintTop_toBottomOf="@+id/fromText"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+
+    <ImageView
+        android:id="@+id/calendarIcon"
+        android:layout_width="31dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/dateText"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toStartOf="@+id/dateText"
+        app:layout_constraintTop_toTopOf="@+id/dateText"
+        app:srcCompat="@drawable/calender"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/destinationIcon"
+        android:layout_width="31dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/toText"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toStartOf="@+id/toText"
+        app:layout_constraintTop_toTopOf="@+id/toText"
+        app:srcCompat="@drawable/finish" />
+
+    <ImageView
+        android:id="@+id/locationIcon"
+        android:layout_width="31dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/fromText"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toStartOf="@+id/fromText"
+        app:layout_constraintTop_toTopOf="@+id/fromText"
+        app:srcCompat="@drawable/location" />
+
+    <ImageView
+        android:id="@+id/carIcon"
+        android:layout_width="98dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whereText"
+        app:srcCompat="@drawable/car" />
+
+    <ImageView
+        android:id="@+id/clockIcon"
+        android:layout_width="31dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/timeText"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toStartOf="@+id/timeText"
+        app:layout_constraintTop_toTopOf="@+id/timeText"
+        app:srcCompat="@drawable/clock" />
+
+    <Button
+        android:id="@+id/getLocation"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/currentlocation"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="@+id/fromText"
+        app:layout_constraintStart_toStartOf="@+id/fromText"
+        app:layout_constraintTop_toTopOf="@+id/fromText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

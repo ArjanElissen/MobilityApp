@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Android Mobility App</string>
+    <string name="YesText">Yes</string>
+    <string name="NoText">No</string>
+    <string name="NewTrip">Plan new trip</string>
+    <string name="QuestionText">Are you driving?</string>
+    <string name="YourTrips">your trips</string>
+    <string name="Where">Where are you going today?</string>
+    <string name="Want">Where do you want to go today?</string>
+    <string name="Travel">Travel possibilities</string>
+    <string name="Back">Back</string>
+    <string name="Create">Create travel</string>
+    <string name="Delete">Delete travel</string>
+    <string name="Add">Add travel</string>
+    <string name="AmountBill">,-</string>
+    <string name="SplashScreen">Welcome to the app</string>
+</resources>
